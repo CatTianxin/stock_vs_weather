@@ -13,7 +13,7 @@ from bs4 import BeautifulSoup
 f = open('Atl_Hurricanes.txt', 'w')
 f.write('year|name|hLink|date|maxWind|minPressure|deaths|damage|landfall' + '\n')
 
-#FOR loop through the years, 1900 to 2017, and grab the hurricane lists from those pages
+#FOR loop through the years, 2001 to 2017, and grab the hurricane lists from those pages
 for y in range(2001,2018):
     year = str(y)
     listPage = 'https://www.wunderground.com/hurricane/at' + year + '.asp'
