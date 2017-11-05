@@ -17,7 +17,7 @@ location = {'KLAX','KORD','KDFW','KJFK','KDEN',
     
 # Iterate through months and day
 for l in location:
-    for y in range(2001,2017):
+    for y in range(2001,2018):
         for m in range(1, 13):
             for d in range(1, 32):
     
