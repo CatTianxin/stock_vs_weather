@@ -1,0 +1,258 @@
+year|name|hLink|date|maxWind|minPressure|deaths|damage|landfall
+2001|Tropical Storm Allison|/hurricane/at20011.asp|06/05-06/19|60|1000|41|9000|Tropical Storm
+2001|Tropical Storm Barry|/hurricane/at20012.asp|08/02-08/08|70|990|2|30|Tropical Storm
+2001|Tropical Storm Chantal|/hurricane/at20013.asp|08/14-08/22|70|997|2|0|No US Landfall
+2001|Tropical Storm Dean|/hurricane/at20014.asp|08/22-08/29|70|994|0|0|No US Landfall
+2001|Major Hurricane Erin|/hurricane/at20015.asp|09/01-09/17|120|968|0|0|No US Landfall
+2001|Major Hurricane Felix|/hurricane/at20016.asp|09/07-09/19|115|962|0|0|No US Landfall
+2001|Hurricane Gabrielle|/hurricane/at20017.asp|09/11-09/21|80|975|2|230|Tropical Storm
+2001|Hurricane Humberto|/hurricane/at20018.asp|09/21-09/27|105|970|0|0|No US Landfall
+2001|Major Hurricane Iris|/hurricane/at20019.asp|10/04-10/09|145|948|31|0|No US Landfall
+2001|Tropical Storm Jerry|/hurricane/at200110.asp|10/06-10/08|50|1004|0|0|No US Landfall
+2001|Hurricane Karen|/hurricane/at200111.asp|10/11-10/15|80|982|0|0|No US Landfall
+2001|Tropical Storm Lorenzo|/hurricane/at200112.asp|10/27-10/31|40|1007|0|0|No US Landfall
+2001|Major Hurricane Michelle|/hurricane/at200113.asp|10/29-11/06|140|934|17|0|No US Landfall
+2001|Hurricane Noel|/hurricane/at200114.asp|11/04-11/06|75|986|0|0|No US Landfall
+2001|Hurricane Olga|/hurricane/at200115.asp|11/23-12/04|90|973|0|0|No US Landfall
+2002|Tropical Storm Arthur|/hurricane/at20021.asp|07/14-07/19|60|992|0|0|No US Landfall
+2002|Tropical Storm Bertha|/hurricane/at20022.asp|08/04-08/09|40|1008|1|0|Tropical Storm
+2002|Tropical Storm Cristobal|/hurricane/at20023.asp|08/05-08/08|50|999|0|0|No US Landfall
+2002|Tropical Storm Dolly|/hurricane/at20024.asp|08/29-09/04|60|997|0|0|No US Landfall
+2002|Tropical Storm Edouard|/hurricane/at20025.asp|09/01-09/06|65|1002|0|0|Tropical Storm
+2002|Tropical Storm Fay|/hurricane/at20026.asp|09/05-09/11|60|998|0|5|Tropical Storm
+2002|Hurricane Gustav|/hurricane/at20027.asp|09/08-09/15|100|960|1|0.1|Tropical Storm
+2002|Tropical Storm Hanna|/hurricane/at20028.asp|09/12-09/15|60|1001|3|20|Tropical Storm
+2002|Major Hurricane Isidore|/hurricane/at20029.asp|09/14-09/27|125|934|5|330|Tropical Storm
+2002|Tropical Storm Josephine|/hurricane/at200210.asp|09/17-09/19|60|1004|0|0|No US Landfall
+2002|Hurricane Kyle|/hurricane/at200211.asp|09/20-10/12|85|980|0|5|Tropical Storm
+2002|Major Hurricane Lili|/hurricane/at200212.asp|09/21-10/04|145|940|13|925|Category 1 Hurricane
+2003|Tropical Storm Ana|/hurricane/at20031.asp|04/18-04/27|60|994|2|0|No US Landfall
+2003|Tropical Storm Bill|/hurricane/at20032.asp|06/28-07/03|60|997|4|30|Tropical Storm
+2003|Hurricane Claudette|/hurricane/at20033.asp|07/07-07/17|85|982|1|180|Category 1 Hurricane
+2003|Hurricane Danny|/hurricane/at20034.asp|07/16-07/27|75|1000|0|0|No US Landfall
+2003|Hurricane Erika|/hurricane/at20035.asp|08/14-08/17|75|988|2|0|No US Landfall
+2003|Major Hurricane Fabian|/hurricane/at20036.asp|08/27-09/09|145|939|8|0|No US Landfall
+2003|Tropical Storm Grace|/hurricane/at20037.asp|08/30-09/02|40|1007|0|0|Tropical Storm
+2003|Tropical Storm Henri|/hurricane/at20038.asp|09/03-09/08|60|997|0|0|No US Landfall
+2003|Major Hurricane Isabel|/hurricane/at20039.asp|09/06-09/20|165|915|17|5370|Category 2 Hurricane
+2003|Hurricane Juan|/hurricane/at200310.asp|09/24-09/29|105|969|2|0|No US Landfall
+2003|Major Hurricane Kate|/hurricane/at200311.asp|09/25-10/10|125|952|0|0|No US Landfall
+2003|Tropical Storm Larry|/hurricane/at200312.asp|09/27-10/07|65|993|5|0|No US Landfall
+2003|Tropical Storm Mindy|/hurricane/at200313.asp|10/10-10/14|45|1002|0|0|No US Landfall
+2003|Tropical Storm Nicholas|/hurricane/at200314.asp|10/13-11/01|70|990|0|0|No US Landfall
+2003|Tropical Storm Odette|/hurricane/at200315.asp|12/04-12/09|65|993|8|0|No US Landfall
+2003|Tropical Storm Peter|/hurricane/at200316.asp|12/07-12/11|70|990|0|0|No US Landfall
+2004|Major Hurricane Alex|/hurricane/at20041.asp|07/31-08/06|120|957|1|5|No US Landfall
+2004|Tropical Storm Bonnie|/hurricane/at20042.asp|08/03-08/14|65|1001|3|0|Tropical Storm
+2004|Major Hurricane Charley|/hurricane/at20043.asp|08/09-08/15|145|947|15|15113|Category 4 Hurricane
+2004|Hurricane Danielle|/hurricane/at20044.asp|08/13-08/24|110|964|0|0|No US Landfall
+2004|Tropical Storm Earl|/hurricane/at20045.asp|08/13-08/15|50|1009|0|0|No US Landfall
+2004|Major Hurricane Frances|/hurricane/at20046.asp|08/25-09/10|145|937|8|9507|Category 2 Hurricane
+2004|Hurricane Gaston|/hurricane/at20047.asp|08/27-09/03|75|986|8|130|Category 1 Hurricane
+2004|Tropical Storm Hermine|/hurricane/at20048.asp|08/27-08/31|60|1002|8|0|Tropical Storm
+2004|Major Hurricane Ivan|/hurricane/at20049.asp|09/02-09/24|165|910|92|18820|Category 3 Hurricane
+2004|Major Hurricane Jeanne|/hurricane/at200410.asp|09/13-09/29|120|951|3000|7660|Category 3 Hurricane
+2004|Major Hurricane Karl|/hurricane/at200411.asp|09/16-09/28|145|938|0|0|No US Landfall
+2004|Hurricane Lisa|/hurricane/at200412.asp|09/19-10/03|75|987|0|0|No US Landfall
+2004|Tropical Storm Matthew|/hurricane/at200413.asp|10/08-10/11|45|997|0|0|Tropical Storm
+2004|Subtropical Storm Nicole|/hurricane/at200414.asp|10/10-10/11|50|986|0|0|No US Landfall
+2004|Tropical Storm Otto|/hurricane/at200415.asp|11/26-12/05|50|995|0|0|No US Landfall
+2005|Tropical Storm Arlene|/hurricane/at20051.asp|06/08-06/14|70|990|1|0|Tropical Storm
+2005|Tropical Storm Bret|/hurricane/at20052.asp|06/28-06/30|40|1005|1|0|No US Landfall
+2005|Hurricane Cindy|/hurricane/at20053.asp|07/03-07/11|75|992|1|320|Category 1 Hurricane
+2005|Major Hurricane Dennis|/hurricane/at20054.asp|07/04-07/18|150|930|42|2545|Category 3 Hurricane
+2005|Major Hurricane Emily|/hurricane/at20055.asp|07/11-07/21|160|929|6|0|No US Landfall
+2005|Tropical Storm Franklin|/hurricane/at20056.asp|07/21-07/31|70|997|0|0|No US Landfall
+2005|Tropical Storm Gert|/hurricane/at20057.asp|07/23-07/25|45|1005|0|0|No US Landfall
+2005|Tropical Storm Harvey|/hurricane/at20058.asp|08/02-08/14|65|994|0|0|No US Landfall
+2005|Hurricane Irene|/hurricane/at20059.asp|08/04-08/18|105|970|0|0|No US Landfall
+2005|Tropical Storm Jose|/hurricane/at200510.asp|08/22-08/23|50|1001|6|0|No US Landfall
+2005|Major Hurricane Katrina|/hurricane/at200511.asp|08/23-08/31|175|902|1200|108000|Category 3 Hurricane
+2005|Tropical Storm Lee|/hurricane/at200512.asp|08/28-09/03|40|1006|0|0|No US Landfall
+2005|Major Hurricane Maria|/hurricane/at200513.asp|09/01-09/13|115|962|0|0|No US Landfall
+2005|Hurricane Nate|/hurricane/at200514.asp|09/05-09/12|90|979|0|0|No US Landfall
+2005|Hurricane Ophelia|/hurricane/at200515.asp|09/06-09/23|85|976|1|70|No US Landfall
+2005|Hurricane Philippe|/hurricane/at200516.asp|09/17-09/24|80|985|0|0|No US Landfall
+2005|Major Hurricane Rita|/hurricane/at200517.asp|09/18-09/26|180|897|7|12037|Category 3 Hurricane
+2005|Hurricane Stan|/hurricane/at200518.asp|10/01-10/05|80|977|80|0|No US Landfall
+2005|Subtropical Storm Unnamed Subtropical Storm|/hurricane/at200519.asp|10/04-10/05|50|997|0|0|No US Landfall
+2005|Tropical Storm Tammy|/hurricane/at200520.asp|10/05-10/07|50|1001|0|0|Tropical Storm
+2005|Hurricane Vince|/hurricane/at200521.asp|10/08-10/11|75|988|0|0|No US Landfall
+2005|Major Hurricane Wilma|/hurricane/at200522.asp|10/15-10/26|185|882|23|21007|Category 3 Hurricane
+2005|Tropical Storm Alpha|/hurricane/at200523.asp|10/22-10/24|50|998|26|0|No US Landfall
+2005|Major Hurricane Beta|/hurricane/at200524.asp|10/26-10/31|115|962|0|0|No US Landfall
+2005|Tropical Storm Gamma|/hurricane/at200525.asp|11/14-11/22|50|1002|37|0|No US Landfall
+2005|Tropical Storm Delta|/hurricane/at200526.asp|11/19-11/29|70|980|0|0|No US Landfall
+2005|Hurricane Epsilon|/hurricane/at200527.asp|11/29-12/09|85|981|0|0|No US Landfall
+2005|Tropical Storm Zeta|/hurricane/at200528.asp|12/30-01/07|65|994|0|0|No US Landfall
+2006|Tropical Storm Alberto|/hurricane/at20061.asp|06/10-06/19|70|969|0|0|Tropical Storm
+2006|Tropical Storm 2|/hurricane/at20062.asp|07/16-07/19|50|998|0|0|No US Landfall
+2006|Tropical Storm Beryl|/hurricane/at20063.asp|07/18-07/22|60|1000|0|0|Tropical Storm
+2006|Tropical Storm Chris|/hurricane/at20064.asp|08/01-08/06|65|1001|0|0|No US Landfall
+2006|Tropical Storm Debby|/hurricane/at20065.asp|08/21-08/28|50|999|0|0|No US Landfall
+2006|Hurricane Ernesto|/hurricane/at20066.asp|08/24-09/04|75|985|5|500|Tropical Storm
+2006|Hurricane Florence|/hurricane/at20067.asp|09/03-09/19|90|963|0|0|No US Landfall
+2006|Major Hurricane Gordon|/hurricane/at20068.asp|09/10-09/24|120|955|0|0|No US Landfall
+2006|Major Hurricane Helene|/hurricane/at20069.asp|09/12-09/27|120|955|0|0|No US Landfall
+2006|Hurricane Isaac|/hurricane/at200610.asp|09/27-10/03|85|985|0|0|No US Landfall
+2007|Subtropical Storm Andrea|/hurricane/at20071.asp|05/06-05/14|75|998|0|0|No US Landfall
+2007|Tropical Storm Barry|/hurricane/at20072.asp|05/31-06/05|60|990|0|0|No US Landfall
+2007|Tropical Storm Chantal|/hurricane/at20073.asp|07/31-08/05|70|964|0|0|No US Landfall
+2007|Major Hurricane Dean|/hurricane/at20074.asp|08/13-08/23|175|907|32|0|No US Landfall
+2007|Tropical Storm Erin|/hurricane/at20075.asp|08/15-08/19|60|995|16|0|No US Landfall
+2007|Major Hurricane Felix|/hurricane/at20076.asp|08/31-09/06|175|930|130|0|No US Landfall
+2007|Tropical Storm Gabrielle|/hurricane/at20077.asp|09/08-09/11|60|1004|0|0|Tropical Storm
+2007|Hurricane Humberto|/hurricane/at20078.asp|09/12-09/14|90|985|1|50|Category 1 Hurricane
+2007|Tropical Storm Ingrid|/hurricane/at20079.asp|09/12-09/18|45|1002|40|0|No US Landfall
+2007|Tropical Storm Jerry|/hurricane/at200710.asp|09/23-09/24|40|1003|0|0|No US Landfall
+2007|Hurricane Karen|/hurricane/at200711.asp|09/25-09/29|75|988|0|0|No US Landfall
+2007|Hurricane Lorenzo|/hurricane/at200712.asp|09/25-09/28|80|990|6|0|No US Landfall
+2007|Tropical Storm Melissa|/hurricane/at200713.asp|09/28-10/05|40|1005|0|0|No US Landfall
+2007|Hurricane Noel|/hurricane/at200714.asp|10/24-11/06|85|965|163|0|No US Landfall
+2007|Tropical Storm Olga|/hurricane/at200715.asp|12/10-12/16|60|1003|25|0|No US Landfall
+2008|Tropical Storm Arthur|/hurricane/at20081.asp|05/31-06/02|45|1004|5|0|No US Landfall
+2008|Major Hurricane Bertha|/hurricane/at20082.asp|07/03-07/21|120|955|3|0|No US Landfall
+2008|Tropical Storm Cristobal|/hurricane/at20083.asp|07/19-07/23|65|998|0|0|No US Landfall
+2008|Hurricane Dolly|/hurricane/at20084.asp|07/20-07/27|100|967|1|1050|Category 1 Hurricane
+2008|Tropical Storm Edouard|/hurricane/at20085.asp|08/03-08/06|65|996|1|0|Tropical Storm
+2008|Tropical Storm Fay|/hurricane/at20086.asp|08/15-08/28|70|986|13|180|Tropical Storm
+2008|Major Hurricane Gustav|/hurricane/at20087.asp|08/25-09/05|145|943|112|4618|Category 2 Hurricane
+2008|Hurricane Hanna|/hurricane/at20088.asp|08/28-09/08|85|977|500|160|Tropical Storm
+2008|Major Hurricane Ike|/hurricane/at20089.asp|09/01-09/15|145|935|103|29520|Category 2 Hurricane
+2008|Tropical Storm Josephine|/hurricane/at200810.asp|09/02-09/10|65|994|0|0|No US Landfall
+2008|Hurricane Kyle|/hurricane/at200811.asp|09/25-09/30|85|984|0|0|No US Landfall
+2008|Tropical Storm Laura|/hurricane/at200812.asp|09/26-10/04|80|990|0|0|No US Landfall
+2008|Tropical Storm Marco|/hurricane/at200813.asp|10/06-10/07|65|998|0|0|No US Landfall
+2008|Tropical Storm Nana|/hurricane/at200814.asp|10/12-10/15|40|1004|0|0|No US Landfall
+2008|Major Hurricane Omar|/hurricane/at200815.asp|10/13-10/21|135|958|0|0|No US Landfall
+2008|Major Hurricane Paloma|/hurricane/at200816.asp|11/05-11/14|145|944|0|0|No US Landfall
+2009|Tropical Storm Ana|/hurricane/at20091.asp|08/10-08/16|40|1003|0|0|No US Landfall
+2009|Major Hurricane Bill|/hurricane/at20092.asp|08/15-08/26|135|943|2|0|No US Landfall
+2009|Tropical Storm Claudette|/hurricane/at20093.asp|08/16-08/17|60|1005|0|0|Tropical Storm
+2009|Tropical Storm Danny|/hurricane/at20094.asp|08/26-08/29|60|1006|1|0|No US Landfall
+2009|Tropical Storm Erika|/hurricane/at20095.asp|09/01-09/04|50|1004|0|0|No US Landfall
+2009|Major Hurricane Fred|/hurricane/at20096.asp|09/07-09/19|120|958|0|0|No US Landfall
+2009|Tropical Storm Grace|/hurricane/at20097.asp|09/27-10/06|65|986|0|0|No US Landfall
+2009|Tropical Storm Henri|/hurricane/at20098.asp|10/06-10/11|50|1005|0|0|No US Landfall
+2009|Hurricane Ida|/hurricane/at20099.asp|11/04-11/11|105|975|1|0|No US Landfall
+2010|Hurricane Alex|/hurricane/at20101.asp|06/24-07/02|105|948|12|10|No US Landfall
+2010|Tropical Storm Bonnie|/hurricane/at20102.asp|07/22-07/25|45|1005|0|0|Tropical Storm
+2010|Tropical Storm Colin|/hurricane/at20103.asp|08/02-08/08|60|1006|0|0|No US Landfall
+2010|Major Hurricane Danielle|/hurricane/at20104.asp|08/21-09/03|135|942|1|0|No US Landfall
+2010|Major Hurricane Earl|/hurricane/at20105.asp|08/24-09/06|145|927|5|18|No US Landfall
+2010|Tropical Storm Fiona|/hurricane/at20106.asp|08/30-09/04|65|998|0|0|No US Landfall
+2010|Tropical Storm Gaston|/hurricane/at20107.asp|09/01-09/08|40|1005|0|0|No US Landfall
+2010|Tropical Storm Hermine|/hurricane/at20108.asp|09/04-09/10|65|990|6|240|No US Landfall
+2010|Major Hurricane Igor|/hurricane/at20109.asp|09/08-09/23|155|924|3|0|No US Landfall
+2010|Major Hurricane Julia|/hurricane/at201010.asp|09/12-09/24|140|948|0|150|No US Landfall
+2010|Major Hurricane Karl|/hurricane/at201011.asp|09/13-09/18|125|956|22|0|No US Landfall
+2010|Hurricane Lisa|/hurricane/at201012.asp|09/20-09/29|85|982|0|0|No US Landfall
+2010|Tropical Storm Matthew|/hurricane/at201013.asp|09/23-09/26|60|998|78|0|No US Landfall
+2010|Tropical Storm Nicole|/hurricane/at201014.asp|09/28-09/30|45|994|13|0|No US Landfall
+2010|Hurricane Otto|/hurricane/at201015.asp|10/06-10/17|85|976|0|0|No US Landfall
+2010|Hurricane Paula|/hurricane/at201016.asp|10/11-10/15|105|981|1|0|No US Landfall
+2010|Hurricane Richard|/hurricane/at201017.asp|10/19-10/26|100|978|1|0|No US Landfall
+2010|Hurricane Shary|/hurricane/at201018.asp|10/28-10/30|75|989|0|0|No US Landfall
+2010|Hurricane Tomas|/hurricane/at201019.asp|10/29-11/10|100|982|44|0|No US Landfall
+2011|Tropical Storm Arlene|/hurricane/at20111.asp|06/29-07/01|65|994|0|0|unknown
+2011|Tropical Storm Bret|/hurricane/at20112.asp|07/17-07/22|65|996|0|0|unknown
+2011|Tropical Storm Cindy|/hurricane/at20113.asp|07/20-07/23|60|1000|0|0|unknown
+2011|Tropical Storm Don|/hurricane/at20114.asp|07/27-07/30|50|998|0|0|unknown
+2011|Tropical Depression Emily|/hurricane/at20115.asp|08/06-08/07|35|1011|0|0|unknown
+2011|Tropical Storm Franklin|/hurricane/at20116.asp|08/12-08/14|45|1004|0|0|unknown
+2011|Tropical Storm Gert|/hurricane/at20117.asp|08/14-08/16|60|1000|0|0|unknown
+2011|Tropical Storm Harvey|/hurricane/at20118.asp|08/19-08/22|60|994|0|0|unknown
+2011|Hurricane Irene|/hurricane/at20119.asp|08/20-08/29|120|942|0|0|unknown
+2011|Tropical Depression Ten|/hurricane/at201110.asp|08/25-08/27|35|1007|0|0|unknown
+2011|Tropical Storm Jose|/hurricane/at201111.asp|08/28-08/29|45|1007|0|0|unknown
+2011|Hurricane Katia|/hurricane/at201112.asp|08/29-09/10|135|946|0|0|unknown
+2011|Tropical Storm Lee|/hurricane/at201113.asp|09/02-09/05|60|986|0|0|unknown
+2011|Hurricane Maria|/hurricane/at201114.asp|09/06-09/16|80|979|0|0|unknown
+2011|Tropical Storm Nate|/hurricane/at201115.asp|09/07-09/12|70|994|0|0|unknown
+2011|Hurricane Ophelia|/hurricane/at201116.asp|09/21-10/03|140|940|0|0|unknown
+2011|Hurricane Philippe|/hurricane/at201117.asp|09/24-10/09|90|976|0|0|unknown
+2011|Hurricane Rina|/hurricane/at201118.asp|10/23-10/28|110|966|0|0|unknown
+2011|Tropical Storm Sean|/hurricane/at201119.asp|11/08-11/11|65|983|0|0|unknown
+2012|Tropical Storm Alberto|/hurricane/at20121.asp|05/19-05/22|50|998|0|0|No US Landfall
+2012|Tropical Storm Beryl|/hurricane/at20122.asp|05/26-05/30|70|993|1|0.148|Tropical Storm
+2012|Hurricane Chris|/hurricane/at201203.asp|6/19-6/22|75|987|0|0|No US Landfall
+2012|Tropical Storm Debby|/hurricane/at201204.asp|6/23-6/27|60|991|7|308.7|Tropical Storm
+2012|Hurricane Ernesto|/hurricane/at201205.asp|8/01-8/10|85|980|7|174|No US Landfall
+2012|Tropical Storm Florence|/hurricane/at201206.asp|8/04-8/06|60|1000|0|0|No US Landfall
+2012|Tropical Storm Helene|/hurricane/at201207.asp|8/17-8/19|45|1004|2|17|No US Landfall
+2012|Hurricane Gordon|/hurricane/at201208.asp|8/15-8/20|110|965|0|0|No US Landfall
+2012|Hurricane Isaac|/hurricane/at201209.asp|8/21-8/30|80|968|34|2,390|Category 1 Hurricane
+2012|Tropical Storm Joyce|/hurricane/at201210.asp|8/22-8/24|40|1006|0|0|No US Landfall
+2012|Hurricane Kirk|/hurricane/at201211.asp|8/28-9/02|105|970|0|0|No US Landfall
+2012|Hurricane Leslie|/hurricane/at201212.asp|8/30-9/11|75|968|0|10.1|No US Landfall
+2012|Hurricane Michael|/hurricane/at201213.asp|9/03-9/11|115|964|0|0|No US Landfall
+2012|Hurricane Nadine|/hurricane/at201214.asp|9/23-10/04|90|978|0|0|No US Landfall
+2012|Tropical Storm Oscar|/hurricane/at201215.asp|10/03-10/05|50|997|0|0|No US Landfall
+2012|Tropical Storm Patty|/hurricane/at201216.asp|10/11-10/13|45|1005|0|0|No US Landfall
+2012|Hurricane Rafael|/hurricane/at201217.asp|10/12-10/17|90|969|1|2|No US Landfall
+2012|Hurricane Sandy|/hurricane/at201218.asp|10/22-10/30|105|940|147|>75,000|Extratropical Cyclone
+2012|Tropical Storm Tony|/hurricane/at201219.asp|10/22-10/25|50|1000|0|0|No US Landfall
+2013|Tropical Storm Andrea|/hurricane/at201301.asp|6/05-6/08|65|993|4|0.086|Tropical Storm
+2013|Tropical Storm Barry|/hurricane/at201302.asp|6/17-6/19|40|1005|5|Minimal|None
+2013|Tropical Storm Chantal|/hurricane/at201303.asp|7/08-7/10|65|1005|1|10|None
+2013|Tropical Depression Dorian|/hurricane/at201304.asp|8/03-8/3|35|1013|0|0|None
+2013|Tropical Storm Erin|/hurricane/at201305.asp|8/15-8/18|40|1006|0|0|None
+2013|Tropical Storm Fernand|/hurricane/at201306.asp|8/25-8/26|50|1001|14|Millions|None
+2013|Tropical Storm Gabrielle|/hurricane/at201307.asp|9/10-9/13|60|1003|0|0|None
+2013|Tropical Depression Eight|/hurricane/at201308.asp|9/06-9/7|35|1009|0|0|None
+2013|Tropical Storm Humberto|/hurricane/at201309.asp|9/16-9/19|45|1003|0|Minimal|None
+2013|Hurricane Ingrid|/hurricane/at201310.asp|9/12-9/17|85|983|23|1500|Category 1 Hurricane
+2013|Tropical Storm Jerry|/hurricane/at201311.asp|9/29-10/3|50|1005|0|0|None
+2013|Tropical Storm Karen|/hurricane/at201312.asp|10/03-10/6|65|999|0|Minimal|Tropical Storm
+2013|Tropical Storm Lorenzo|/hurricane/at201313.asp|10/21-10/24|50|1003|0|0|None
+2013|Subtropical Storm Melissa|/hurricane/at201314.asp|11/18-11/22|65|980|0|0|None
+2014|Hurricane Arthur|en.wikipedia.org/wiki/Hurricane_Arthur|07/01-07/09|100|973|1|22.4|Category 2 Hurricane
+2014|Hurricane Bertha|AL032014_Bertha.pdf|08/01-08/06|81|995|2|Minimal|Category 1 Hurricane
+2014|Hurricane Cristobal|AL042014_Cristobal.pdf|08/23-08/29|86|965|7|unknown|Category 1 Hurricane
+2014|Tropical Storm Dolly|/hurricane/at201405.asp|9/01-9/3|50|1002|1|6.5|Tropical Storm
+2014|Hurricane Edouard|/hurricane/at201406.asp|9/11-9/19|115|955|0|0|Category 3 hurricane
+2014|Hurricane Fay|/hurricane/at201407.asp|10/10-10/13|75|986|0|10|Category 1 hurricane
+2014|Hurricane Gonzalo|/hurricane/at201408.asp|10/12-10/19|145|940|6|400|Category 4 hurricane
+2014|Tropical Storm Hanna|/hurricane/at201409.asp|10/27-10/28|40|1005|0|0|Tropical Storm
+2015|Tropical Storm Ana|AL012015_Ana.pdf|05/08-05/11|58|998|1|minimal|Tropical Storm
+2015|Tropical Storm Bill|AL022015_Bill.pdf|06/16-06/18|58|997|2|17.9|Tropical Storm
+2015|Tropical Storm Claudette|AL032015_Claudette.pdf|07/13-07/14|52|1003|0|0|Tropical Storm
+2015|Hurricane Danny|AL042015_Danny.pdf|08/18-08/24|127|960|0|minimal|Category 3 Hurricane
+2015|Tropical Storm Erika|AL052015_Erika.pdf|08/24-08/28|52|1001|30|511.4|Tropical Storm
+2015|Hurricane Fred|AL062015_Fred.pdf|08/30-09/06|86|986|9|2.5|Category 1 Hurricane
+2015|Tropical Storm Grace|AL072015_Grace.pdf|09/05-09/09|58|1000|0|0|Tropical Storm
+2015|Tropical Storm Henri|AL082015_Henri.pdf|09/08-09/11|52|1003|0|0|Tropical Storm
+2015|Tropical Storm Ida|/hurricane/at201510.asp|9/18-9/27|50|1003|0|0|NA
+2015|Hurricane Joaquin|/hurricane/at201511.asp|9/28-10/8|155|931|34|200|Category 4 hurricane
+2015|Hurricane Kate|/hurricane/at201512.asp|11/09-11/12|75|983|0|minimal|Category 1 hurricane
+2016|Hurricane Alex|/hurricane/at201601.asp|1/13-1/15|85|981|1|minimal|Category 1 hurrican
+2016|Tropical Storm Bonnie|/hurricane/at201602.asp|6/02-6/5|40|1006|2|0.64|Tropical Storm
+2016|Tropical Storm Colin|/hurricane/at201603.asp|6/05-6/7|60|996|6|1.04|Tropical Storm
+2016|Tropical Storm Danielle|/hurricane/at201604.asp|6/19-6/21|45|1007|1|minimal|NA
+2016|Hurricane Earl|/hurricane/at201605.asp|8/02-8/06|75|982|94|250|Category 1 hurricane
+2016|Tropical Storm Fiona|/hurricane/at201606.asp|8/17-8/23|50|1004|0|0|NA
+2016|Hurricane Gaston|/hurricane/at201607.asp|8/22-9/3|120|956|0|0|Category 3 hurricane
+2016|Tropical Depression Eight|/hurricane/at201608.asp|8/28-9/1|35|1010|0|0|Tropical Storm
+2016|Hurricane Hermine|/hurricane/at201609.asp|8/28-9/6|80|982|4|550|Category 1 hurricane
+2016|Tropical Storm Ian|/hurricane/at201610.asp|9/12-9/16|65|988|0|0|NA
+2016|Tropical Storm Julia|/hurricane/at201611.asp|9/14-9/19|40|1007|0|minimal|Tropical Storm
+2016|Tropical Storm Karl|/hurricane/at201612.asp|9/14-9/25|70|986|0|minimal|NA
+2016|Tropical Storm Lisa|/hurricane/at201613.asp|9/19-9/25|50|999|0|0|NA
+2016|Hurricane Matthew|/hurricane/at201614.asp|9/28-10/09|160|934|586|15090|Category 5 hurricane
+2016|Hurricane Nicole|/hurricane/at201615.asp|10/04-10/18|135|950|1|15|Category 4 hurricane 
+2016|Hurricane Otto|/hurricane/at201616.asp|11/21-11/25|110|975|23|190|Category 3 hurricane
+2017|Tropical Storm Cindy|/hurricane/at201703.asp|6/20-6/22|60|992|2|unknown|Tropical Storm
+2017|Tropical Depression Four|/hurricane/at201704.asp|7/06-7/07|30|1008|0|0|NA
+2017|Tropical Storm Don|/hurricane/at201705.asp|7/17-7/19|50|1007|NA|NA|NA
+2017|Tropical Storm Emily|/hurricane/at201706.asp|7/31-8/02|45|1005|NA|NA|NA
+2017|Hurricane Franklin|/hurricane/at201707.asp|8/07-8/10|85|984|0|unknown|Category 1 hurricane
+2017|Hurricane Gert|/hurricane/at201708.asp|8/13-8/17|105|967|NA|NA|NA
+2017|Hurricane Harvey|/hurricane/at201709.asp|8/30-8/31|45|993|63|198600|Category 4 hurricane
+2017|Hurricane Irma|/hurricane/at201711.asp|8/30-9/12|185|914|134|62870|Category 5 hurricane
+2017|Hurricane Jose|/hurricane/at201712.asp|9/05-9/21|155|938|1|minimal|Category 4 hurricane
+2017|Hurricane Katia|/hurricane/at201713.asp|9/05-9/09|105|972|2|unknown|Category 2 hurricane
+2017|Hurricane Lee|/hurricane/at201714.asp|9/22-9/30|115|962|NA|NA|NA
+2017|Hurricane Maria|/hurricane/at201715.asp|9/16-9/30|175|909|66|51200|Category 5 hurricane
+2017|Hurricane Nate|/hurricane/at201716.asp|10/04-10/08|90|981|45|685|Category 1 hurricane
+2017|Hurricane Ophelia|/hurricane/at201717.asp|10/09-10/16|115|960|3|1180|Category 3 hurricane
+2017|Tropical Storm Philippe|/hurricane/at201718.asp|10/29-10/29|60|991|NA|NA|NA
