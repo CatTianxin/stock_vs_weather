@@ -9,6 +9,31 @@ setwd('D:\\Project\\OR538 Project\\dataset')
 DJI = read.csv('^DJI.csv', header = T)
 DJUSIP = read.csv('^DJUSIP.csv', header = T)
 final = read.csv('final_dataset.csv', header = T)
+SplitDates = read.csv('SplitDate.csv', header = T)
+
+# data transfer
+final$During = as.character(final$During)
+final$Strong = as.character(final$Strong)
+final$Death = as.character(final$Death)
+final$temp_rise = as.character(final$temp_rise)
+final$temp_decrease = as.character(final$temp_decrease)
+final$high_temp = as.character(final$high_temp)
+SplitDates$when = as.POSIXct(SplitDates$when)
+SplitDates$name = as.character(SplitDates$name)
+dat = final[,-c(1,12,13,14,15)]
+volume = final[,14]
+
+# data checking
+str(dat)
+
+# install.packages('corrplot',dependencies = T)
+library(corrplot)
+cor(as.matrix(final[,c(2,3,4,11)]))
+dat = dat[,-c(2,3)]
+
+#######
+#Return
+#######
 
 # abnormal return
 DJIreturn = diff(log(final$DJI))
@@ -20,41 +45,84 @@ abreturn = DJUSIPreturn - m$coefficients[1]-m$coefficients[2]*DJIreturn
 plot(ts(abreturn,start=2001,frequency = 252),xlim=c(2001,2018),axes=F)
 axis(1,at=2001:2018,labels=2001:2018);axis(2);box()
 
-acf(abreturn)
-pacf(abreturn)
-
-library(forecast)
-m1 = auto.arima(abreturn)
-summary(m1)
-
 n = dim(data.frame(abreturn))[1]
-abreturn.t_1 = abreturn[-1]
-abreturn.t_2 = abreturn.t_1[-1]
-abreturn.t = abreturn[-n]
 
-m2= lm(abreturn.t[-(n-1)]~abreturn.t_1[-(n-1)]+abreturn.t_2)
+# abreturn linear model
+dat2 = cbind(dat[-n,],abreturn)
+m2 = lm(abreturn~.-abreturn,data=dat2)
 summary(m2)
-
-final$During = as.character(final$During)
-final$Strong = as.character(final$Strong)
-final$Death = as.character(final$Death)
-final$temp_rise = as.character(final$temp_rise)
-final$temp_decrease = as.character(final$temp_decrease)
-final$high_temp = as.character(final$high_temp)
-dat = final[,-c(1,12,13,14)]
-volume = final[,14]
-
-dat2 = cbind(dat[-c(4208,4209,4210),],abreturn.t[-(n-1)],abreturn.t_1[-(n-1)],abreturn.t_2)
-colnames(dat2) = c('avgTemp','maxTemp','minTemp','During','Strong','Death','temp_rise',
-                   'temp_decrease','high_temp','temp_diff','abreturn.t','abreturn.t_1',
-                   'abreturn.t_2')
-m3 = lm(abreturn.t~.-abreturn.t,data=dat2)
-summary(m3)
 # which indicates that I use abnormal return
 # is a very bad choice to invest the correlations
 
-# abnormal price
+# abreturn vs AR(1)
+abreturn.t=abreturn[-n]
+abreturn.t_1=abreturn[-1]
+dat3 = cbind(dat[-c(n,n-1),],abreturn.t,abreturn.t_1)
+m3 = lm(abreturn.t~.-abreturn.t,data=dat3)
+summary(m3)
+# which indicates that this model is also a bad one
+# no correlation with other vars
 
+# event study
+# install.packages('eventstudies',dependencies = T)
+library(eventstudies)
+library(zoo)
+StockAbreturns = xts(abreturn, order.by=as.POSIXct(final$date[-n]))
+head(StockAbreturns)
+
+es1 = eventstudy(
+  firm.returns = StockAbreturns,
+  event.list = SplitDates,
+  event.window = 10,
+  type = "None",
+  to.remap = TRUE,
+  remap = "cumsum",
+  inference = TRUE,
+  inference.strategy = "bootstrap")
+# no successful event
+
+# return
+return = diff(log(final$DJUSIP))
+
+plot(ts(return,start=2001,frequency = 252),xlim=c(2001,2018),axes=F)
+axis(1,at=2001:2018,labels=2001:2018);axis(2);box()
+
+# return linear model
+n = dim(data.frame(return))[1]
+dat4 = cbind(dat[-n,],return)
+m4 = lm(return~.-return,data=dat4)
+summary(m4)
+# if temperature is greater than 65 sig
+
+# return vs AR(1)
+return.t = return[-n]
+return.t_1 = return[-1]
+dat5 = cbind(dat[-c(n,n-1),],return.t,return.t_1)
+m5 = lm(return.t~.-return.t,data=dat5)
+summary(m5)
+# if temperature is greater than 65 sig
+# AR(1) sig
+
+# event study
+StockReturns = xts(return, order.by=as.POSIXct(final$date[-n]))
+head(StockReturns)
+
+es2 = eventstudy(
+  firm.returns = StockReturns,
+  event.list = SplitDates,
+  event.window = 10,
+  type = "None",
+  to.remap = TRUE,
+  remap = "cumsum",
+  inference = TRUE,
+  inference.strategy = "bootstrap")
+# no successful event
+
+######
+#Price
+######
+
+# abnormal price
 DJIprice = log(final$DJI)
 DJUSIPprice = log(final$DJUSIP)
 
@@ -64,111 +132,99 @@ abprice = DJUSIPprice - m$coefficients[1]-m$coefficients[2]*DJIprice
 plot(ts(abprice,start=2001,frequency = 252),xlim=c(2001,2018),axes=F)
 axis(1,at=2001:2018,labels=2001:2018);axis(2);box()
 
-acf(abprice)
-acf(diff(abprice))
-pacf(abprice)
+# abprice linear model -- could be a good one
+dat6 = cbind(dat,abprice)
+m6 = lm(abprice~.-abprice,data=dat6)
+summary(m6)
+# temp rise or decrease not sig
 
-library(forecast)
-m1 = auto.arima(abprice)
-summary(m1)
-
+# abprice vs AR(1)
 n = dim(data.frame(abprice))[1]
 abprice.t_1 = abprice[-1]
 abprice.t = abprice[-n]
 
-m2= lm(abprice.t~abprice.t_1)
-summary(m2)
+dat7 = cbind(dat[-n,],abprice.t,abprice.t_1)
+m7 = lm(abprice.t~.-abprice.t,data=dat7)
+summary(m7)
+# AR(1) sig
+# no correlations
 
-final$During = as.character(final$During)
-final$Strong = as.character(final$Strong)
-final$Death = as.character(final$Death)
-final$temp_rise = as.character(final$temp_rise)
-final$temp_decrease = as.character(final$temp_decrease)
-final$high_temp = as.character(final$high_temp)
-dat = final[,-c(1,12,13,14)]
-volume = final[,14]
+# event study
+StockAbprice = xts(abprice, order.by=as.POSIXct(final$date))
+head(StockAbprice)
 
-dat2 = cbind(dat[-4210,],abprice.t,abprice.t_1)
-colnames(dat2) = c('avgTemp','maxTemp','minTemp','During','Strong','Death','temp_rise',
-                   'temp_decrease','high_temp','temp_diff','abprice.t','abprice.t_1')
-m3 = lm(abprice.t~.-abprice.t,data=dat2)
-summary(m3)
-
-# still not good to see correlations
-
-# return
-return = diff(log(final$DJUSIP))
-
-plot(ts(return,start=2001,frequency = 252),xlim=c(2001,2018),axes=F)
-axis(1,at=2001:2018,labels=2001:2018);axis(2);box()
-
-acf(return)
-pacf(return)
-
-library(forecast)
-m1 = auto.arima(return)
-summary(m1)
-
-n = dim(data.frame(return))[1]
-return.t_1 = return[-1]
-return.t_2 = return.t_1[-1]
-return.t = return[-n]
-
-m2= lm(return.t[-(n-1)]~return.t_1[-(n-1)]+return.t_2)
-summary(m2)
-
-final$During = as.character(final$During)
-final$Strong = as.character(final$Strong)
-final$Death = as.character(final$Death)
-final$temp_rise = as.character(final$temp_rise)
-final$temp_decrease = as.character(final$temp_decrease)
-final$high_temp = as.character(final$high_temp)
-dat = final[,-c(1,12,13,14)]
-volume = final[,14]
-
-dat2 = cbind(dat[-c(4208,4209,4210),],return.t[-(n-1)],return.t_1[-(n-1)],return.t_2)
-colnames(dat2) = c('avgTemp','maxTemp','minTemp','During','Strong','Death','temp_rise',
-                   'temp_decrease','high_temp','temp_diff','return.t','return.t_1',
-                   'return.t_2')
-m3 = lm(return.t~.-return.t,data=dat2)
-summary(m3)
-
-# indicates if temperature is greater than 65, it will decrease the log return
+es3 = eventstudy(
+  firm.returns = StockAbprice,
+  event.list = SplitDates,
+  event.window = 10,
+  type = "None",
+  to.remap = TRUE,
+  remap = "cumsum",
+  inference = TRUE,
+  inference.strategy = "bootstrap")
+# no successful event
 
 # price
 price = log(final$DJI)
 plot(ts(price,start=2001,frequency = 252),xlim=c(2001,2018),axes=F)
 axis(1,at=2001:2018,labels=2001:2018);axis(2);box()
 
-acf(price)
-acf(diff(price))
-pacf(price)
+# price linear model
+dat8 = cbind(dat,price)
+m8 = lm(price~.-price,data=dat8)
+summary(m8)
+# death, temp rise or decrease not sig
+m8.step = step(m8, direction="backward")
+summary(m8.step)
 
-library(forecast)
-m1 = auto.arima(price)
-summary(m1)
-
+# price vs AR(1)
 n = dim(data.frame(price))[1]
 price.t_1 = price[-1]
 price.t = price[-n]
 
-m2= lm(price.t~price.t_1)
-summary(m2)
+dat9 = cbind(dat[-n,],price.t,price.t_1)
+m9 = lm(price.t~.-price.t,data=dat9)
+summary(m9)
+# AR(1) sig
+# no correlations
 
-final$During = as.character(final$During)
-final$Strong = as.character(final$Strong)
-final$Death = as.character(final$Death)
-final$temp_rise = as.character(final$temp_rise)
-final$temp_decrease = as.character(final$temp_decrease)
-final$high_temp = as.character(final$high_temp)
-dat = final[,-c(1,12,13,14)]
-volume = final[,14]
+# event study
+StockPrice = xts(price, order.by=as.POSIXct(final$date))
+head(StockPrice)
 
-dat2 = cbind(dat[-4210,],price.t,price.t_1)
-colnames(dat2) = c('avgTemp','maxTemp','minTemp','During','Strong','Death','temp_rise',
-                   'temp_decrease','high_temp','temp_diff','price.t','price.t_1')
-m3 = lm(price.t~.-price.t,data=dat2)
-summary(m3)
+es4 = eventstudy(
+  firm.returns = StockPrice,
+  event.list = SplitDates,
+  event.window = 10,
+  type = "None",
+  to.remap = TRUE,
+  remap = "cumsum",
+  inference = TRUE,
+  inference.strategy = "bootstrap")
+# no successful event
 
-# if I do not include AR term
-# tbc
+#######
+#Volume
+#######
+plot(ts(volume,start=2001,frequency = 252),xlim=c(2001,2018),axes=F)
+axis(1,at=2001:2018,labels=2001:2018);axis(2);box()
+
+# volume linear model
+dat10 = cbind(volume, dat)
+m10 = lm(volume~., data=dat10)
+summary(m10)
+
+# event study
+StockVolume = xts(volume, order.by=as.POSIXct(final$date))
+head(StockVolume)
+
+es4 = eventstudy(
+  firm.returns = StockVolume,
+  event.list = SplitDates,
+  event.window = 10,
+  type = "None",
+  to.remap = TRUE,
+  remap = "cumsum",
+  inference = TRUE,
+  inference.strategy = "bootstrap")
+# no successful event
