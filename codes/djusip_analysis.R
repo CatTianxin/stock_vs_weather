@@ -6,30 +6,33 @@ setwd('D:\\Project\\OR538 Project\\dataset')
 
 # data loading
 
-DJI = read.csv('^DJI.csv', header = T)
-DJUSIP = read.csv('^DJUSIP.csv', header = T)
 final = read.csv('final_dataset.csv', header = T)
 SplitDates = read.csv('SplitDate.csv', header = T)
+DJI = final$DJI
+DJUSIP = final$DJUSIP
+volume = final$DJUSIP_Volume
 
 # data transfer
 final$During = as.character(final$During)
 final$Strong = as.character(final$Strong)
 final$Death = as.character(final$Death)
-final$temp_rise = as.character(final$temp_rise)
-final$temp_decrease = as.character(final$temp_decrease)
 final$high_temp = as.character(final$high_temp)
+final$season = as.character(final$season)
+
 SplitDates$when = as.POSIXct(SplitDates$when)
 SplitDates$name = as.character(SplitDates$name)
-dat = final[,-c(1,12,13,14,15)]
-volume = final[,14]
+
+dat = final[,-c(1,11,12,13,14,15)]
 
 # data checking
 str(dat)
 
 # install.packages('corrplot',dependencies = T)
 library(corrplot)
-cor(as.matrix(final[,c(2,3,4,11)]))
+cor(as.matrix(final[,c(2,3,4,9)]))
 dat = dat[,-c(2,3)]
+
+str(dat)
 
 #######
 #Return
@@ -92,7 +95,7 @@ n = dim(data.frame(return))[1]
 dat4 = cbind(dat[-n,],return)
 m4 = lm(return~.-return,data=dat4)
 summary(m4)
-# if temperature is greater than 65 sig
+# no sig
 
 # return vs AR(1)
 return.t = return[-n]
@@ -100,7 +103,6 @@ return.t_1 = return[-1]
 dat5 = cbind(dat[-c(n,n-1),],return.t,return.t_1)
 m5 = lm(return.t~.-return.t,data=dat5)
 summary(m5)
-# if temperature is greater than 65 sig
 # AR(1) sig
 
 # event study
@@ -136,7 +138,8 @@ axis(1,at=2001:2018,labels=2001:2018);axis(2);box()
 dat6 = cbind(dat,abprice)
 m6 = lm(abprice~.-abprice,data=dat6)
 summary(m6)
-# temp rise or decrease not sig
+m6.step = step(m6,direction = "backward")
+summary(m6.step)
 
 # abprice vs AR(1)
 n = dim(data.frame(abprice))[1]
@@ -210,9 +213,11 @@ plot(ts(volume,start=2001,frequency = 252),xlim=c(2001,2018),axes=F)
 axis(1,at=2001:2018,labels=2001:2018);axis(2);box()
 
 # volume linear model
-dat10 = cbind(volume, dat)
+dat10 = cbind(volume, dat[,-c(5,6,8)])
 m10 = lm(volume~., data=dat10)
 summary(m10)
+m10.step = step(m10,direction="backward")
+summary(m10.step)
 
 # event study
 StockVolume = xts(volume, order.by=as.POSIXct(final$date))
