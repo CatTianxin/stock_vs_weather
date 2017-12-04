@@ -19,8 +19,7 @@ final$Death = as.character(final$Death)
 final$high_temp = as.character(final$high_temp)
 final$season = as.character(final$season)
 
-SplitDates$when = as.POSIXct(SplitDates$when)
-SplitDates$name = as.character(SplitDates$name)
+SplitDates$when = as.Date(SplitDates$when)
 
 dat = final[,-c(1,11,12,13,14,15)]
 
@@ -70,19 +69,24 @@ summary(m3)
 # install.packages('eventstudies',dependencies = T)
 library(eventstudies)
 library(zoo)
-StockAbreturns = xts(abreturn, order.by=as.POSIXct(final$date[-n]))
+StockAbreturns = zoo(cbind(abreturn), order.by=as.Date(final$date[-n]))
 head(StockAbreturns)
+str(StockAbreturns)
+
+SplitDates$name = c("abreturn")
+head(SplitDates)
+str(SplitDates)
 
 es1 = eventstudy(
   firm.returns = StockAbreturns,
   event.list = SplitDates,
-  event.window = 10,
+  event.window = 5,
   type = "None",
   to.remap = TRUE,
   remap = "cumsum",
   inference = TRUE,
   inference.strategy = "bootstrap")
-# no successful event
+es1
 
 # return
 return = diff(log(final$DJUSIP))
@@ -106,8 +110,13 @@ summary(m5)
 # AR(1) sig
 
 # event study
-StockReturns = xts(return, order.by=as.POSIXct(final$date[-n]))
+StockReturns = zoo(cbind(return), order.by=as.Date(final$date[-n]))
 head(StockReturns)
+str(StockReturns)
+
+SplitDates$name = c("return")
+head(SplitDates)
+str(SplitDates)
 
 es2 = eventstudy(
   firm.returns = StockReturns,
@@ -115,10 +124,10 @@ es2 = eventstudy(
   event.window = 10,
   type = "None",
   to.remap = TRUE,
-  remap = "cumsum",
+  remap = "cumprod",
   inference = TRUE,
   inference.strategy = "bootstrap")
-# no successful event
+es2
 
 ######
 #Price
@@ -153,8 +162,15 @@ summary(m7)
 # no correlations
 
 # event study
-StockAbprice = xts(abprice, order.by=as.POSIXct(final$date))
+
+StockAbprice = zoo(cbind(abprice), order.by=as.Date(final$date))
 head(StockAbprice)
+str(StockAbprice)
+
+SplitDates$name = c("abprice")
+head(SplitDates)
+str(SplitDates)
+
 
 es3 = eventstudy(
   firm.returns = StockAbprice,
@@ -165,7 +181,7 @@ es3 = eventstudy(
   remap = "cumsum",
   inference = TRUE,
   inference.strategy = "bootstrap")
-# no successful event
+es3
 
 # price
 price = log(final$DJI)
@@ -192,8 +208,13 @@ summary(m9)
 # no correlations
 
 # event study
-StockPrice = xts(price, order.by=as.POSIXct(final$date))
+StockPrice = zoo(cbind(price), order.by=as.Date(final$date))
 head(StockPrice)
+str(StockPrice)
+
+SplitDates$name = c("price")
+head(SplitDates)
+str(SplitDates)
 
 es4 = eventstudy(
   firm.returns = StockPrice,
@@ -204,7 +225,7 @@ es4 = eventstudy(
   remap = "cumsum",
   inference = TRUE,
   inference.strategy = "bootstrap")
-# no successful event
+es4
 
 #######
 #Volume
@@ -213,23 +234,28 @@ plot(ts(volume,start=2001,frequency = 252),xlim=c(2001,2018),axes=F)
 axis(1,at=2001:2018,labels=2001:2018);axis(2);box()
 
 # volume linear model
-dat10 = cbind(volume, dat[,-c(5,6,8)])
+dat10 = cbind(volume, dat)
 m10 = lm(volume~., data=dat10)
 summary(m10)
 m10.step = step(m10,direction="backward")
 summary(m10.step)
 
 # event study
-StockVolume = xts(volume, order.by=as.POSIXct(final$date))
+StockVolume = zoo(cbind(volume), order.by=as.Date(final$date))
 head(StockVolume)
+str(StockVolume)
 
-es4 = eventstudy(
+SplitDates$name = c("volume")
+head(SplitDates)
+str(SplitDates)
+
+es5 = eventstudy(
   firm.returns = StockVolume,
   event.list = SplitDates,
-  event.window = 10,
+  event.window = 5,
   type = "None",
   to.remap = TRUE,
   remap = "cumsum",
   inference = TRUE,
   inference.strategy = "bootstrap")
-# no successful event
+es5
