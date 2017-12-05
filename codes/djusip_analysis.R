@@ -101,6 +101,10 @@ m4 = lm(return~.-return,data=dat4)
 summary(m4)
 # no sig
 
+par(mfrow=c(1,2))
+plot(residuals(m4))
+acf(residuals(m4))
+
 # return vs AR(1)
 return.t = return[-n]
 return.t_1 = return[-1]
@@ -196,6 +200,10 @@ summary(m8)
 m8.step = step(m8, direction="backward")
 summary(m8.step)
 
+par(mfrow=c(1,2))
+plot(residuals(m8))
+acf(residuals(m8))
+
 # price vs AR(1)
 n = dim(data.frame(price))[1]
 price.t_1 = price[-1]
@@ -204,8 +212,12 @@ price.t = price[-n]
 dat9 = cbind(dat[-n,],price.t,price.t_1)
 m9 = lm(price.t~.-price.t,data=dat9)
 summary(m9)
+
 # AR(1) sig
 # no correlations
+par(mfrow=c(1,2))
+plot(residuals(m9))
+acf(residuals(m9))
 
 # event study
 StockPrice = zoo(cbind(price), order.by=as.Date(final$date))
@@ -240,6 +252,10 @@ summary(m10)
 m10.step = step(m10,direction="backward")
 summary(m10.step)
 
+par(mfrow=c(1,2))
+plot(residuals(m10))
+acf(residuals(m10))
+
 # event study
 StockVolume = zoo(cbind(volume), order.by=as.Date(final$date))
 head(StockVolume)
@@ -259,3 +275,17 @@ es5 = eventstudy(
   inference = TRUE,
   inference.strategy = "bootstrap")
 es5
+
+# spurious regression
+temp.ts = ts(final$avgTemp, start=c(2001,1,1), frequency = 252)
+DJUSIP.ts = ts(log(final$DJUSIP), start=c(2001,1,1), frequency = 252)
+
+spurious = lm(DJUSIP.ts ~ temp.ts)
+summary(spurious)
+acf(resid(spurious))
+lag.DJUSIP= lag(DJUSIP.ts, -1)
+y = cbind(DJUSIP.ts, temp.ts, lag.DJUSIP)
+head(y)
+model = lm(y[,1] ~ y[,2] + y[,3])
+summary(model)
+acf(resid(model))
